@@ -7,6 +7,8 @@ class Message extends Component{
             message : 'this is just the beninging',
             counter : 0
         }
+
+        this.changeMessage = this.changeMessage.bind(this)
     }
 
     changeMessage(){
@@ -30,7 +32,9 @@ class Message extends Component{
         return (
         <div>
             <h1> {this.state.message}</h1>
-            <button onClick={() => this.changeMessage()}> Subscribe </button>
+            {/* <button onClick={() => this.changeMessage()}> Subscribe </button> */}
+            <button onClick={this.changeMessage}> Subscribe </button>
+
         </div>
         
         )
